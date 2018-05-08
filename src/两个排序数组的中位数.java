@@ -26,9 +26,9 @@ public class 两个排序数组的中位数 {
             double R2 = (c2 == n2 * 2) ? Integer.MAX_VALUE : nums2[c2 / 2];
 
             if (L1 > R2)
-                lo = c2 + 1; // 增大c1，减小c2
+                lo = c2 + 1; // 增大c2，减小c1，向右移动c2
             else if (L2 > R1)
-                hi = c2 - 1; // 减小c1，增大c2
+                hi = c2 - 1; // 减小c2，增大c1，向左移动c2
             else
                 return (Math.max(L1, L2) + Math.min(R1, R2)) / 2;
         }
